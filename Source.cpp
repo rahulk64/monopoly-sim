@@ -15,18 +15,18 @@ using namespace std;
 
 int prize; //community chest and chance
 
-int playerMoney = 2500;
-int computerMoney = 2500;
-int boardPlace = 0;
-int computerPlace = 0;
-string place;
-string CPUplace;
-int playerJailTurns = 0;
+int playerMoney = 2500; //initial starting money
+int computerMoney = 2500; //initial computer starting money
+int boardPlace = 0; //GO!
+int computerPlace = 0; //GO!
+string place; //player's place landed, NAME
+string CPUplace; //computer's place landed, NAME
+int playerJailTurns = 0; //when you get into jail, so it skips your turn
 int computerJailTurns = 0;
-char yn2;
+char yn2; //variable for user imput on whether player wants to colonize place landed or not
 
-void medAvenue();
-char Medavenue = 'e';
+void medAvenue(); //What happens when you land on places:
+char Medavenue = 'e'; //Who owns the place: ('e' means empty, 'u' means YOU have it, 'c' means computer has it)
 void communityChest();
 void balticAvenue();
 char Balticavenue = 'e';
@@ -1214,11 +1214,11 @@ void chance()
 		boardPlace = 39;
 		place = "Broadway";
 		break;
-	case 14: cout << "You have been elected chairman of the board – pay the computer $50\n";
+	case 14: cout << "You have been elected chairman of the board Â– pay the computer $50\n";
 		playerMoney -= 50;
 		computerMoney += 50;
 		break;
-	case 15: cout << "Your building loan matures – collect $150\n";
+	case 15: cout << "Your building loan matures Â– collect $150\n";
 		playerMoney += 150;
 		break;
 	case 16: cout << "You have won a crossword competition - collect $100\n";
