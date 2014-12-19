@@ -92,8 +92,8 @@ void computerRoll();
 
 int main()
 {
-	srand(static_cast<unsigned int>(time(0)));
-	prize = (rand() % 18) + 1;
+	srand(static_cast<unsigned int>(time(0))); //RANDOMIZING SEED
+	prize = (rand() % 18) + 1; //Community chest and chance card you get.
 	cout << "Welcome to Monopoly!" << endl;
 
 	string continueq;
