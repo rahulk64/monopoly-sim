@@ -92,11 +92,10 @@ void computerRoll();
 
 int main()
 {
-	srand(static_cast<unsigned int>(time(0))); //RANDOMIZING SEED
+	srand(time(NULL)); //RANDOMIZING SEED
 	prize = (rand() % 18) + 1; //Community chest and chance card you get.
 	cout << "Welcome to Monopoly!" << endl;
 
-	string continueq;
 
 	do
 	{
@@ -123,11 +122,6 @@ int main()
 			checkPlace();
 	}
 
-		cout << "Continue? (yes/no): ";
-		cin >> continueq;
-		if(continueq == "no")
-			break;
-
 		if (computerJailTurns > 0)
 		{
 			--computerJailTurns;
@@ -141,9 +135,7 @@ int main()
 		cout << "You have $" << playerMoney << endl;
 		cout << "The computer has $" << computerMoney << endl;
 
-		cout << "Continue? (yes/no): ";
-		cin >> continueq; 
-	} while(continueq != "no" &&(playerMoney >= 0 && computerMoney >= 0));
+	} while(playerMoney >= 0 && computerMoney >= 0);
 
 	cout << "You ended with $" << playerMoney << endl;
 	cout << "The computer ended with $" << computerMoney << endl;
@@ -152,7 +144,7 @@ int main()
 
 int dieRoller()
 {
-	srand(static_cast<unsigned int>(time(0)));
+	srand(time(NULL));
 
 	int randomNumber = rand();
 
@@ -331,7 +323,7 @@ void checkPlace()
 
 void computerRoll()
 {
-	srand(static_cast<unsigned int>(time(0)));
+	srand(time(NULL));
 
 	int randomNum = rand();
 
@@ -398,7 +390,7 @@ void computerRoll()
 				playerMoney +=50;
 				computerMoney -=50;
 				break;
-			case 8: cout << "Incont Tax Refund. You gain $20\n";
+			case 8: cout << "Income Tax Refund. You gain $20\n";
 				playerMoney += 20;
 				break;
 			case 9: cout << "Life Insurance matures! Gain $100\n";
