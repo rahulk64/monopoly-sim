@@ -95,7 +95,7 @@ int main()
 	srand(time(NULL)); //RANDOMIZING SEED
 	prize = (rand() % 18) + 1; //Community chest and chance card you get.
 	cout << "Welcome to Monopoly!" << endl;
-
+	string continueq;
 
 	do
 	{
@@ -134,8 +134,9 @@ int main()
 
 		cout << "You have $" << playerMoney << endl;
 		cout << "The computer has $" << computerMoney << endl;
-
-	} while(playerMoney >= 0 && computerMoney >= 0);
+		cout << "Continue? (yes/no): ";
+		cin >> continueq; 
+	} while(continueq != "no" &&(playerMoney >= 0 && computerMoney >= 0));
 
 	cout << "You ended with $" << playerMoney << endl;
 	cout << "The computer ended with $" << computerMoney << endl;
