@@ -2015,7 +2015,8 @@ void parkPlace()
 }
 void luxuryTax()
 {
-
+	cout << "You have to pay a luxury tax of $75.\n";
+	playerMoney -= 75;
 }
 void broadway()
 {
