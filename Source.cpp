@@ -149,8 +149,9 @@ int dieRoller()
 	int randomNumber = rand();
 
 	int die = (randomNumber % 6) + 1;
+	int die2 = (randomNumber % 6) + 1;
 
-	return die;
+	return die + die2;
 }
 
 void checkPlace()
@@ -328,9 +329,10 @@ void computerRoll()
 	int randomNum = rand();
 
 	int dice = (randomNum % 6) + 1;
+	int dice2 = (randomNum % 6) + 1;
 
-	cout << "The computer rolled a " << dice << endl;
-	computerPlace += dice;
+	cout << "The computer rolled a " << dice + dice2 << endl;
+	computerPlace += dice + dice2;
 
 	if(computerPlace > 39)
 	{
@@ -367,7 +369,7 @@ void computerRoll()
 			{
 			case 1: cout << "Advance to GO! Computer collect $200!\n";
 				place = "Start";
-				CPUplace = 0;
+				CPUplace = "Start";
 				computerMoney += 200;
 				break;
 			case 2: cout << "Bank error in computer's favor. Computer collects $75.\n";
@@ -490,7 +492,7 @@ void computerRoll()
 			{
 			case 1: cout << "Advance to GO! Computer collect $200!\n";
 				place = "Start";
-				CPUplace = 0;
+				CPUplace = "Start";
 				computerMoney += 200;
 				break;
 			case 2: cout << "Bank error in computer's favor. Computer collects $75.\n";
@@ -696,7 +698,7 @@ void computerRoll()
 			{
 			case 1: cout << "Advance to GO! Computer collect $200!\n";
 				place = "Start";
-				CPUplace = 0;
+				CPUplace = "Start";
 				computerMoney += 200;
 				break;
 			case 2: cout << "Bank error in computer's favor. Computer collects $75.\n";
@@ -817,7 +819,7 @@ void computerRoll()
 			{
 			case 1: cout << "Advance to GO! Computer collect $200!\n";
 				place = "Start";
-				CPUplace = 0;
+				CPUplace = "0";
 				computerMoney += 200;
 				break;
 			case 2: cout << "Bank error in computer's favor. Computer collects $75.\n";
@@ -1042,7 +1044,7 @@ void computerRoll()
 			{
 			case 1: cout << "Advance to GO! Computer collect $200!\n";
 				place = "Start";
-				CPUplace = 0;
+				CPUplace = "Start";
 				computerMoney += 200;
 				break;
 			case 2: cout << "Bank error in computer's favor. Computer collects $75.\n";
@@ -1143,7 +1145,7 @@ void computerRoll()
 			{
 			case 1: cout << "Advance to GO! Computer collect $200!\n";
 				place = "Start";
-				CPUplace = 0;
+				CPUplace = "Start";
 				computerMoney += 200;
 				break;
 			case 2: cout << "Bank error in computer's favor. Computer collects $75.\n";
@@ -2015,8 +2017,7 @@ void parkPlace()
 }
 void luxuryTax()
 {
-	cout << "You have to pay a luxury tax of $75.\n";
-	playerMoney -= 75;
+
 }
 void broadway()
 {
