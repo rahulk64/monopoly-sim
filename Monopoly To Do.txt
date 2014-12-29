@@ -1,0 +1,16 @@
+EARLY STAGES TO DO:
+//Confirm Colonization (Or Say "You chose not to colonize " << place << endl;) (Part of fixing the {!= 'n'} problem by adding an else if statement asking if it does equal to n) 
+//If the computer lands on the same place you did, then tell that computer has to pay you
+//Finish up the Computer Landings (Make the computer pay you, have the computer colonize whatever it lands on)
+//At end of computer turn, say which places you have colonized and which places the computer has colonized (Ask, and if not "no", then do it)
+//Fix Money Amounts (Make it exactly what the Monopoly Amounts Are)
+
+AFTER FIXING BUGS:
+//Finish up all the possible landing for both computer AND player
+//Make it like the real Monopoly: Make Railroads cost more if other owns more of them
+//Make player and computer to spend money on Houses and Hotels (After Buy) and make landing on them more expensive
+//Allow Mortgages (for player, possibly for computer)
+//Add more "Chance" and "Community Chest" Prizes!
+//Add "Get Out of Jail Free" Card
+//Make it seem more like the actual monopoly, but completely text based
+//
